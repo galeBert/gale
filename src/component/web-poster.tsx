@@ -4,7 +4,7 @@ export default function WebPoster() {
   return (
    <>
    <div className="absolute hidden md:flex justify-between  w-full font-montserrat  text-heading-xl
-          xl:p-0 px-1.5
+          xl:p-0 px-1.5 
           bottom-16 xl:bottom-6
           lg:text-heading-2xl
           dark:text-primary-600">
