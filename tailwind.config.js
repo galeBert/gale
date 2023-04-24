@@ -12,7 +12,7 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx,mp4}'],
   darkMode: 'class',
   theme: {
     fontFamily: {
@@ -22,17 +22,25 @@ module.exports = {
       montserrat: ['"Montserrat"']
     },
     extend: {
+      letterSpacing: {
+        mostWide: '.50rem'
+      },
       animation: {
+        rotate: 'rotate 5s linear infinite',
         marquee: 'marquee 10s linear infinite',
-        backwardMarquee: 'backwardMarquee 10s linear infinite',
+        backwardMarquee: 'backwardMarquee 6s linear infinite',
       },
       keyframes: {
+        rotate: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-63.7%)' },
+          '100%': { transform: 'translateX(-43.4%)' },
         },
         backwardMarquee: {
-          '0%': { transform: 'translateX(-63.7%)' },
+          '0%': { transform: 'translateX(-43.4%)' },
           '100%': { transform: 'translateX(0%)' },
         },
       },
@@ -85,6 +93,17 @@ module.exports = {
           700: withOpacityValue('--tw-color-green-700'),
           800: withOpacityValue('--tw-color-green-800'),
           900: withOpacityValue('--tw-color-green-900'),
+        },
+        gray: {
+          100: withOpacityValue('--tw-color-gray-100'),
+          200: withOpacityValue('--tw-color-gray-200'),
+          300: withOpacityValue('--tw-color-gray-300'),
+          400: withOpacityValue('--tw-color-gray-400'),
+          500: withOpacityValue('--tw-color-gray-500'),
+          600: withOpacityValue('--tw-color-gray-600'),
+          700: withOpacityValue('--tw-color-gray-700'),
+          800: withOpacityValue('--tw-color-gray-800'),
+          900: withOpacityValue('--tw-color-gray-900'),
         },
         dark: {
           100: withOpacityValue('--tw-color-dark-100'),

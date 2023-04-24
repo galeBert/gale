@@ -1,16 +1,22 @@
 
+import { useState } from "react";
 import Navigation from "./component/navigation";
 import Home from "./pages/Home";
-// import Proto from "./pages/Proto";
+import Nav from "./pages/Nav";
+import Poster from "./pages/Poster";
 
 function App() {  
-
+const [isNavOpen, setIsNavOpen] = useState(false);
   return (
-     <div className="max-w-[1280px] relative mx-auto h-[5000px]">
-      <Navigation />
+     <div className="max-w-[1280px] mx-auto h-[5000px]">
+      <Nav isNavOpen={isNavOpen} />
+      
+      <Navigation setIsNavOpen={setIsNavOpen} isNavOpen={isNavOpen} />
+      
+      <div className="pb-60">
       <Home />
-      <div className="w-11 h-11 bg-cyan-400 sticky top-0" />
-
+      </div>
+      <Poster />
      </div>
   );
 }

@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.font-outline-2 {
+  -webkit-text-stroke: 2px black;
+}
 @font-face {
     font-family: "Clash";
     src: url("../../public/fonts/ClashDisplay-Regular.otf");
@@ -79,26 +82,49 @@
     --color-green-900: rgb(var(--tw-color-green-900));
     /* #endregion  /**======== Green Color ===========
 
-    /* #region  /**=========== Dark Color =========== */
-    --tw-color-dark-100: 37 38 39;
-    --tw-color-dark-200: 33 34 35;
-    --tw-color-dark-300: 29 30 30;
-    --tw-color-dark-400: 25 25 26;
-    --tw-color-dark-500: 21 21 22;
-    --tw-color-dark-600: 17 17 18;
-    --tw-color-dark-700: 13 13 13;
-    --tw-color-dark-800: 9 9 9;
-    --tw-color-dark-900: 4 5 5;
-    --color-dark-100: rgb(var(--tw-color-dark-100));
-    --color-dark-200: rgb(var(--tw-color-dark-200));
-    --color-dark-300: rgb(var(--tw-color-dark-300));
-    --color-dark-400: rgb(var(--tw-color-dark-400));
-    --color-dark-500: rgb(var(--tw-color-dark-500));
-    --color-dark-600: rgb(var(--tw-color-dark-600));
-    --color-dark-700: rgb(var(--tw-color-dark-700));
-    --color-dark-800: rgb(var(--tw-color-dark-800));
-    --color-dark-900: rgb(var(--tw-color-dark-900));
-  /* #endregion  /**======== Dark Color =========== */
+     /* #region  /**=========== Gray Color =========== */
+     --tw-color-gray-100: 216 216 217;
+     --tw-color-gray-200: 189 190 191;
+     --tw-color-gray-300: 156 157 159;
+     --tw-color-gray-400: 124 125 128;
+     --tw-color-gray-500: 91 93 96;
+     --tw-color-gray-600: 58 60 64;
+     --tw-color-gray-700: 48 50 53;
+     --tw-color-gray-800: 39 40 43;
+     --tw-color-gray-900: 29 30 52;
+     --color-gray-100: rgb(var(--tw-color-gray-100));
+     --color-gray-200: rgb(var(--tw-color-gray-200));
+     --color-gray-300: rgb(var(--tw-color-gray-300));
+     --color-gray-400: rgb(var(--tw-color-gray-400));
+     --color-gray-500: rgb(var(--tw-color-gray-500));
+     --color-gray-600: rgb(var(--tw-color-gray-600));
+     --color-gray-700: rgb(var(--tw-color-gray-700));
+     --color-gray-800: rgb(var(--tw-color-gray-800));
+     --color-gray-900: rgb(var(--tw-color-gray-900));
+   /* #endregion  /**======== Gray Color =========== */
+
+   /* #region  /**=========== Dark Color =========== */
+   --tw-color-dark-100: 37 38 39;
+   --tw-color-dark-200: 33 34 35;
+   --tw-color-dark-300: 29 30 30;
+   --tw-color-dark-400: 25 25 26;
+   --tw-color-dark-500: 21 21 22;
+   --tw-color-dark-600: 17 17 18;
+   --tw-color-dark-700: 13 13 13;
+   --tw-color-dark-800: 9 9 9;
+   --tw-color-dark-900: 4 5 5;
+   --color-dark-100: rgb(var(--tw-color-dark-100));
+   --color-dark-200: rgb(var(--tw-color-dark-200));
+   --color-dark-300: rgb(var(--tw-color-dark-300));
+   --color-dark-400: rgb(var(--tw-color-dark-400));
+   --color-dark-500: rgb(var(--tw-color-dark-500));
+   --color-dark-600: rgb(var(--tw-color-dark-600));
+   --color-dark-700: rgb(var(--tw-color-dark-700));
+   --color-dark-800: rgb(var(--tw-color-dark-800));
+   --color-dark-900: rgb(var(--tw-color-dark-900));
+ /* #endregion  /**======== Dark Color =========== */
+
+    
 }
 
 body {
