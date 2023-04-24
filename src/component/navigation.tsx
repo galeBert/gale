@@ -4,7 +4,7 @@ export default function Navigation({ setIsNavOpen, isNavOpen }: { setIsNavOpen: 
 
   return (
     <nav className='dark:text-primary-600 relative py-10 overflow-hidden h-[177px] top-0'>
-      <div className="absolute -top-9 -left-9 animate-rotate">
+      <div className="absolute -top-9 -left-9 animate-rotate md:hidden">
       <CircleText fontSize={12} width={150} className='font-montserrat'>
         DESIGN BY GALE * DESIGN BY GALE *
       </CircleText>
