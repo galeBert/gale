@@ -48,7 +48,7 @@ export default function Poster() {
   return (
       <div ref={ref} className='w-full h-full max-h-[1200px] overflow-x-clip  flex justify-center pt-10 relative'>
         <motion.div style={{ scale: scale2(), originY: `50%`, top: `${prog2()}%`}} transition={{duration:3}} className={` sticky flex items-center justify-center lg:w-[490px] w-[300px] h-64 `}>
-        <video autoPlay muted loop className="w-full overflow-clip md:max-w-[100%]  max-w-[200px]"
+        <video autoPlay muted loop playsInline defaultChecked preload="auto" className="w-full overflow-clip md:max-w-[100%]  max-w-[200px]"
         src='https://firebasestorage.googleapis.com/v0/b/gale-web.appspot.com/o/vid.mp4?alt=media&token=0350e5a9-1b18-4eb8-ba3b-b8be48fa1e48' />
         </motion.div>
         <WebPoster />
