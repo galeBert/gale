@@ -45,7 +45,7 @@ export default function Home() {
         </div>
         <div className='relative'>       
         <p className='text-justify dark:text-primary-600'>
-        Experiencedddd Frontend Developer with 5+ Years of Expertise in React and TypeScript,
+        Experienced Frontend Developer with 5+ Years of Expertise in React and TypeScript,
          Based in Bandung, Indonesia. Passionate about creating
           <span className='border-2 border-solid text-left border-orange-600 rounded-lg px-1 dark:border-green-600 whitespace-nowrap m-1'>engaging user</span> 
           experiences and delivering top-quality code
