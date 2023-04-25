@@ -34,10 +34,24 @@ export default function Poster() {
   }
 
   useEffect(() => {
-    if(videoRef) {
-      videoRef.current?.play()
-    }
-  }, [])
+    const handleVisibilityChange = () => {
+      if (
+        document.visibilityState === "visible" &&
+        videoRef.current &&
+        videoRef.current.paused
+      ) {
+        // Autoplay video when tab becomes visible
+        videoRef.current.play();
+      }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, []);
+
   
   return (
       <div ref={ref} className='w-full h-full max-h-[1000px] md:max-h-[1200px] overflow-x-clip  flex justify-center -mt-36 md:pt-10 relative'>
