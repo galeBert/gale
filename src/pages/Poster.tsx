@@ -33,6 +33,16 @@ export default function Poster() {
     return scale
   }
 
+  const handlePlay = () => {
+    const videoElement = videoRef.current;
+    if (videoElement && !videoElement.paused) {
+      // video is already playing, do nothing
+    } else {
+      // video is not playing, play video now
+      videoElement?.play();
+    }
+  };
+
   useEffect(() => {
     const handleVisibilityChange = () => {
       if (
@@ -56,7 +66,7 @@ export default function Poster() {
   return (
       <div ref={ref} className='w-full h-full max-h-[1000px] md:max-h-[1200px] overflow-x-clip  flex justify-center -mt-36 md:pt-10 relative'>
         <motion.div style={{ scale: scale2(), originY: `50%`}} transition={{duration:3}} className='sticky flex items-center top-1/3 justify-center lg:w-[490px] w-[300px] h-64'>
-        <video ref={videoRef} autoPlay muted={true} loop playsInline defaultChecked onContextMenu={() => false} preload="auto" className="w-full overflow-clip md:max-w-[100%]  max-w-[200px]"
+        <video ref={videoRef} onTouchStart={handlePlay} autoPlay muted={true} loop playsInline defaultChecked onContextMenu={() => false} preload="auto" className="w-full overflow-clip md:max-w-[100%]  max-w-[200px]"
         src='https://firebasestorage.googleapis.com/v0/b/gale-web.appspot.com/o/vid.mp4?alt=media&token=0350e5a9-1b18-4eb8-ba3b-b8be48fa1e48' />
         </motion.div>
         <WebPoster />
