@@ -7,6 +7,13 @@ import { Banner } from '../component/Banner';
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
 
+  const [playMarquee, setPlayMarquee] = useState(false);
+useEffect(() => {
+  setTimeout(() => {
+    setPlayMarquee(true)
+  }, 2500);
+}, [])
+
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -56,22 +63,17 @@ export default function Home() {
       
       </div>
             <div  className='w-full h-2/3 min-h-[400px] md:h-full overflow-hidden relative'>
-              {/* <div className='absolute z-20 top-20'>
-              <Banner title="DESIGN&nbsp;BY&nbsp;GALE&nbsp;*&nbsp;&nbsp;" className='font-clash  text-clip whitespace-nowrap text-heading-2xl' />
-              </div> */}
-             
-         
       
               <motion.button onClick={() => setDarkMode(!darkMode)} whileHover={'hover'} whileTap="pressed" className='w-full max-w-[466px] flex md:block items-end justify-center  transform ease-in-out md:rounded-none rounded-br-2xl rounded-bl-2xl  h-full max-h-[698px] bg-orange-600 dark:bg-green-600'>
               <div className=' z-10 w-[2500px] md:hidden  h-full pointer-events-none absolute overflow-x-hidden left-0 top-20'>
-<div className={` animate-backwardMarquee flex w-full `}>
+<div className={` ${playMarquee ? 'animate-marquee': ''} flex w-full `}>
         {Array.from({length: 4}).map((_, key) => {
           return <Banner title="DESIGN&nbsp;BY&nbsp;GALE&nbsp;*&nbsp;&nbsp;" className='font-clash  text-clip whitespace-nowrap text-heading-2xl' />
         } )}
         </div>
       </div>
       <div className=' z-10 w-[2500px] md:hidden  h-full pointer-events-none absolute overflow-x-hidden left-0 top-44'>
-<div className={` animate-marquee flex w-full `}>
+<div className={` ${playMarquee ? 'animate-backwardMarquee': ''} flex w-full `}>
         {Array.from({length: 4}).map((_, key) => {
           return <Banner title="DESIGN&nbsp;BY&nbsp;GALE&nbsp;*&nbsp;&nbsp;" className='font-clash  text-clip whitespace-nowrap text-heading-2xl' />
         } )}
