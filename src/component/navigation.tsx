@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react"
+import { Banner } from "./Banner"
 import CircleText from "./circle-text"
 
 export default function Navigation({ setIsNavOpen, isNavOpen }: { setIsNavOpen: (isOpen: boolean) => void, isNavOpen: boolean}) {
+const [playMarquee, setPlayMarquee] = useState(false);
+useEffect(() => {
+  setTimeout(() => {
+    setPlayMarquee(true)
+  }, 2500);
+}, [])
 
   return (
     <nav className='dark:text-primary-600 relative py-10 overflow-hidden h-[177px] top-0'>
@@ -10,19 +18,18 @@ export default function Navigation({ setIsNavOpen, isNavOpen }: { setIsNavOpen: 
       </CircleText>
       </div>
       <div  className='absolute z-0 hidden md:block pointer-events-none mb-6 left-0  w-[2500px] overflow-hidden -top-16'>
-        <div  className='animate-marquee  w-full'>
+        <div  className={`${playMarquee ? 'animate-marquee': ''} flex  w-full`}>
         {Array.from({length: 4}).map((_, key) => {
-        return <span  key={key} className='font-clash text-clip whitespace-nowrap text-heading-2xl'>DESIGN BY GALE * &nbsp;</span>
+        return <Banner title="DESIGN&nbsp;BY&nbsp;GALE&nbsp;*&nbsp;&nbsp;" className='font-clash  text-clip whitespace-nowrap text-heading-2xl' />
         } )}
         </div>
         
       </div>
       <div className=' z-0 w-[2500px] hidden md:block h-full pointer-events-none absolute overflow-x-hidden left-0 top-14'>
-<div className=' animate-backwardMarquee w-full '>
+<div className={` ${playMarquee ? 'animate-backwardMarquee': ''} flex w-full `}>
         {Array.from({length: 4}).map((_, key) => {
-        return <span key={key} className='font-clash  text-clip whitespace-nowrap text-heading-2xl'>DESIGN BY GALE * &nbsp;</span>
+          return <Banner title="DESIGN&nbsp;BY&nbsp;GALE&nbsp;*&nbsp;&nbsp;" className='font-clash  text-clip whitespace-nowrap text-heading-2xl' />
         } )}
-
         </div>
       </div>
         <div className="w-full h-40 ">

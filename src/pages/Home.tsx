@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Hercules from '../assets/home-cover-clean.png'
 import { motion, useScroll, useTransform } from 'framer-motion';
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false)
 
@@ -33,15 +34,13 @@ export default function Home() {
 
     }
   }, [darkMode])
-
   return (
-    <div ref={ref} className='w-full h-full max-h-[698px] flex md:-mt-9'>
-      
+    <div ref={ref} className='w-full h-full max-h-[698px] flex -mt-48 md:-mt-9 flex-col-reverse md:flex-row'>
       <div className='w-full flex justify-center items-center font-clash'>
         <div className='relative max-w-[417px] md:m-4 md:px-0 mx-8'>
-          <div className='absolute rounded-full bg-orange-600 dark:bg-green-700 left-5 md:left-3 w-[46px] h-[46px] ' />
-          <div className='pb-10'>
-        <span className='text-label-xl   dark:text-primary-600 font-clashSemibold z-[1] relative'>Tailored </span><span className='text-label-l font-clashSemibold dark:text-primary-600'>frontend Solutions to Drive Digital Success for Cutting-edge brands</span>
+          <div className='absolute rounded-full bg-orange-600 dark:bg-green-700 left-2 md:left-3 w-[26px] h-[26px] md:w-[46px] md:h-[46px] top-7  md:top-0 ' />
+          <div className='pb-10 pt-6'>
+        <span className='md:text-label-xl text-[24px] dark:text-primary-600 font-clashSemibold z-[1] relative'>Tailored </span><span className=' text-[18px] md:text-label-l font-clashSemibold dark:text-primary-600'>frontend Solutions to Drive Digital Success for Cutting-edge brands</span>
         </div>
         <div className='relative'>       
         <p className='text-justify dark:text-primary-600'>
@@ -54,11 +53,10 @@ export default function Home() {
         </div>
       
       </div>
-            <div  className='w-full overflow-hidden relative md:block hidden'>
-              <motion.button onClick={() => setDarkMode(!darkMode)} whileHover={'hover'} whileTap="pressed" className='w-full max-w-[466px]  transform ease-in-out  h-full max-h-[698px] bg-orange-600 dark:bg-green-600'>
+            <div  className='w-full overflow-hidden relative'>
+              <motion.button onClick={() => setDarkMode(!darkMode)} whileHover={'hover'} whileTap="pressed" className='w-full max-w-[466px]  transform ease-in-out  h-full max-h-[698px] -m-5 bg-orange-600 dark:bg-green-600'>
               <motion.img style={{ y }} variants={ImageRef} alt='cover' className=' h-full' animate={{scale:1.2}} src={Hercules}/>
               </motion.button>
-              
             </div>
     </div>
   )

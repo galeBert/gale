@@ -37,12 +37,8 @@ export default function Poster() {
     const videoElement = videoRef.current;
     if (videoElement && !videoElement.paused) {
       // video is already playing, do nothing
-      console.log('aaaa');
-
     } else {
       // video is not playing, play video now
-      console.log('aaaa');
-      
       videoElement?.play();
     }
   };

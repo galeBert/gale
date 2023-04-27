@@ -128,5 +128,5 @@
 }
 
 body {
-    @apply bg-primary-600 dark:bg-dark-100 px-1 md:px-6 xl:px-0 max-w-[1280px] mx-auto;
+    @apply bg-primary-600 dark:bg-dark-100  md:px-6 xl:px-0 max-w-[1280px] mx-auto;
 }
