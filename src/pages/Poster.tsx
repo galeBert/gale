@@ -63,7 +63,7 @@ export default function Poster() {
           playsInline
           preload="none"
           className="w-full overflow-clip md:max-w-[100%]  max-w-[200px]"
-          src="https://firebasestorage.googleapis.com/v0/b/gale-web.appspot.com/o/vid.mp4?alt=media&token=0350e5a9-1b18-4eb8-ba3b-b8be48fa1e48"
+          src="https://firebasestorage.googleapis.com/v0/b/gale-web.appspot.com/o/display_vids.mp4?alt=media&token=41796f40-39c6-437a-88ca-f22f87b57af0"
         />
       </motion.div>
       <WebPoster />

@@ -6,127 +6,129 @@
   -webkit-text-stroke: 2px black;
 }
 @font-face {
-    font-family: "Clash";
-    src: url("../../public/fonts/ClashDisplay-Regular.otf");
-  }
-  @font-face {
-    font-family: "Clash-Semibold";
-    
-    src: url("../../public/fonts/ClashDisplay-Semibold.otf");
-  }
-  @font-face {
-    font-family: "Montserrat";
-    src: url("../../public/fonts/Montserrat-VariableFont_wght.ttf");
-  }
-:root {
-    /* #region  /**=========== Primary Color =========== */
-    --tw-color-primary-100: 252 252 252;
-    --tw-color-primary-200: 251 250 248;
-    --tw-color-primary-300: 248 247 244;
-    --tw-color-primary-400: 246 244 240;
-    --tw-color-primary-500: 244 242 237;
-    --tw-color-primary-600: 242 239 233;
-    --tw-color-primary-700: 202 199 194;
-    --tw-color-primary-800: 161 159 155;
-    --tw-color-primary-900: 81 80 78;
-    --color-primary-100: rgb(var(--tw-color-primary-100));
-    --color-primary-200: rgb(var(--tw-color-primary-200));
-    --color-primary-300: rgb(var(--tw-color-primary-300));
-    --color-primary-400: rgb(var(--tw-color-primary-400));
-    --color-primary-500: rgb(var(--tw-color-primary-500));
-    --color-primary-600: rgb(var(--tw-color-primary-600));
-    --color-primary-700: rgb(var(--tw-color-primary-700));
-    --color-primary-800: rgb(var(--tw-color-primary-800));
-    --color-primary-900: rgb(var(--tw-color-primary-900));
-    /* #endregion  /**======== Primary Color =========== */
+  font-family: "Clash";
+  src: url("../../public/fonts/ClashDisplay-Regular.otf");
+}
+@font-face {
+  font-family: "Clash-Semibold";
 
-    /* #region  /**=========== Orange Color =========== */
-    --tw-color-orange-100: 255 221 207;
-    --tw-color-orange-200: 255 199 175;
-    --tw-color-orange-300: 254 171 135;
-    --tw-color-orange-400: 254 143 95;
-    --tw-color-orange-500: 254 115 55;
-    --tw-color-orange-600: 255 80 5;
-    --tw-color-orange-700: 212 73 13;
-    --tw-color-orange-800: 169 58 10;
-    --tw-color-orange-900: 127 44 8;
-    --color-orange-100: rgb(var(--tw-color-orange-100));
-    --color-orange-200: rgb(var(--tw-color-orange-200));
-    --color-orange-300: rgb(var(--tw-color-orange-300));
-    --color-orange-400: rgb(var(--tw-color-orange-400));
-    --color-orange-500: rgb(var(--tw-color-orange-500));
-    --color-orange-600: rgb(var(--tw-color-orange-600));
-    --color-orange-700: rgb(var(--tw-color-orange-700));
-    --color-orange-800: rgb(var(--tw-color-orange-800));
-    --color-orange-900: rgb(var(--tw-color-orange-900));
-    /* #endregion  /**======== Orange Color ===========
+  src: url("../../public/fonts/ClashDisplay-Semibold.otf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../public/fonts/Montserrat-VariableFont_wght.ttf");
+}
+:root {
+  /* #region  /**=========== Primary Color =========== */
+  --tw-color-primary-100: 252 252 252;
+  --tw-color-primary-200: 251 250 248;
+  --tw-color-primary-300: 248 247 244;
+  --tw-color-primary-400: 246 244 240;
+  --tw-color-primary-500: 244 242 237;
+  --tw-color-primary-600: 242 239 233;
+  --tw-color-primary-700: 202 199 194;
+  --tw-color-primary-800: 161 159 155;
+  --tw-color-primary-900: 81 80 78;
+  --color-primary-100: rgb(var(--tw-color-primary-100));
+  --color-primary-200: rgb(var(--tw-color-primary-200));
+  --color-primary-300: rgb(var(--tw-color-primary-300));
+  --color-primary-400: rgb(var(--tw-color-primary-400));
+  --color-primary-500: rgb(var(--tw-color-primary-500));
+  --color-primary-600: rgb(var(--tw-color-primary-600));
+  --color-primary-700: rgb(var(--tw-color-primary-700));
+  --color-primary-800: rgb(var(--tw-color-primary-800));
+  --color-primary-900: rgb(var(--tw-color-primary-900));
+  /* #endregion  /**======== Primary Color =========== */
+
+  /* #region  /**=========== Orange Color =========== */
+  --tw-color-orange-100: 255 221 207;
+  --tw-color-orange-200: 255 199 175;
+  --tw-color-orange-300: 254 171 135;
+  --tw-color-orange-400: 254 143 95;
+  --tw-color-orange-500: 254 115 55;
+  --tw-color-orange-600: 255 80 5;
+  --tw-color-orange-700: 212 73 13;
+  --tw-color-orange-800: 169 58 10;
+  --tw-color-orange-900: 127 44 8;
+  --color-orange-100: rgb(var(--tw-color-orange-100));
+  --color-orange-200: rgb(var(--tw-color-orange-200));
+  --color-orange-300: rgb(var(--tw-color-orange-300));
+  --color-orange-400: rgb(var(--tw-color-orange-400));
+  --color-orange-500: rgb(var(--tw-color-orange-500));
+  --color-orange-600: rgb(var(--tw-color-orange-600));
+  --color-orange-700: rgb(var(--tw-color-orange-700));
+  --color-orange-800: rgb(var(--tw-color-orange-800));
+  --color-orange-900: rgb(var(--tw-color-orange-900));
+  /* #endregion  /**======== Orange Color ===========
 
     /* #region  /**=========== Green Color =========== */
-    --tw-color-green-100: 255 221 207;
-    --tw-color-green-200: 255 199 175;
-    --tw-color-green-300: 254 171 135;
-    --tw-color-green-400: 254 143 95;
-    --tw-color-green-500: 254 115 55;
-    --tw-color-green-600: 30 252 30;
-    --tw-color-green-700: 25 210 25;
-    --tw-color-green-800: 20 168 20;
-    --tw-color-green-900: 127 44 8;
-    --color-green-100: rgb(var(--tw-color-green-100));
-    --color-green-200: rgb(var(--tw-color-green-200));
-    --color-green-300: rgb(var(--tw-color-green-300));
-    --color-green-400: rgb(var(--tw-color-green-400));
-    --color-green-500: rgb(var(--tw-color-green-500));
-    --color-green-600: rgb(var(--tw-color-green-600));
-    --color-green-700: rgb(var(--tw-color-green-700));
-    --color-green-800: rgb(var(--tw-color-green-800));
-    --color-green-900: rgb(var(--tw-color-green-900));
-    /* #endregion  /**======== Green Color ===========
+  --tw-color-green-100: 255 221 207;
+  --tw-color-green-200: 255 199 175;
+  --tw-color-green-300: 254 171 135;
+  --tw-color-green-400: 254 143 95;
+  --tw-color-green-500: 254 115 55;
+  --tw-color-green-600: 30 252 30;
+  --tw-color-green-700: 25 210 25;
+  --tw-color-green-800: 20 168 20;
+  --tw-color-green-900: 127 44 8;
+  --color-green-100: rgb(var(--tw-color-green-100));
+  --color-green-200: rgb(var(--tw-color-green-200));
+  --color-green-300: rgb(var(--tw-color-green-300));
+  --color-green-400: rgb(var(--tw-color-green-400));
+  --color-green-500: rgb(var(--tw-color-green-500));
+  --color-green-600: rgb(var(--tw-color-green-600));
+  --color-green-700: rgb(var(--tw-color-green-700));
+  --color-green-800: rgb(var(--tw-color-green-800));
+  --color-green-900: rgb(var(--tw-color-green-900));
+  /* #endregion  /**======== Green Color ===========
 
      /* #region  /**=========== Gray Color =========== */
-     --tw-color-gray-100: 216 216 217;
-     --tw-color-gray-200: 189 190 191;
-     --tw-color-gray-300: 156 157 159;
-     --tw-color-gray-400: 124 125 128;
-     --tw-color-gray-500: 91 93 96;
-     --tw-color-gray-600: 58 60 64;
-     --tw-color-gray-700: 48 50 53;
-     --tw-color-gray-800: 39 40 43;
-     --tw-color-gray-900: 29 30 52;
-     --color-gray-100: rgb(var(--tw-color-gray-100));
-     --color-gray-200: rgb(var(--tw-color-gray-200));
-     --color-gray-300: rgb(var(--tw-color-gray-300));
-     --color-gray-400: rgb(var(--tw-color-gray-400));
-     --color-gray-500: rgb(var(--tw-color-gray-500));
-     --color-gray-600: rgb(var(--tw-color-gray-600));
-     --color-gray-700: rgb(var(--tw-color-gray-700));
-     --color-gray-800: rgb(var(--tw-color-gray-800));
-     --color-gray-900: rgb(var(--tw-color-gray-900));
-   /* #endregion  /**======== Gray Color =========== */
+  --tw-color-gray-100: 216 216 217;
+  --tw-color-gray-200: 189 190 191;
+  --tw-color-gray-300: 156 157 159;
+  --tw-color-gray-400: 124 125 128;
+  --tw-color-gray-500: 91 93 96;
+  --tw-color-gray-600: 58 60 64;
+  --tw-color-gray-700: 48 50 53;
+  --tw-color-gray-800: 39 40 43;
+  --tw-color-gray-900: 29 30 52;
+  --color-gray-100: rgb(var(--tw-color-gray-100));
+  --color-gray-200: rgb(var(--tw-color-gray-200));
+  --color-gray-300: rgb(var(--tw-color-gray-300));
+  --color-gray-400: rgb(var(--tw-color-gray-400));
+  --color-gray-500: rgb(var(--tw-color-gray-500));
+  --color-gray-600: rgb(var(--tw-color-gray-600));
+  --color-gray-700: rgb(var(--tw-color-gray-700));
+  --color-gray-800: rgb(var(--tw-color-gray-800));
+  --color-gray-900: rgb(var(--tw-color-gray-900));
+  /* #endregion  /**======== Gray Color =========== */
 
-   /* #region  /**=========== Dark Color =========== */
-   --tw-color-dark-100: 37 38 39;
-   --tw-color-dark-200: 33 34 35;
-   --tw-color-dark-300: 29 30 30;
-   --tw-color-dark-400: 25 25 26;
-   --tw-color-dark-500: 21 21 22;
-   --tw-color-dark-600: 17 17 18;
-   --tw-color-dark-700: 13 13 13;
-   --tw-color-dark-800: 9 9 9;
-   --tw-color-dark-900: 4 5 5;
-   --color-dark-100: rgb(var(--tw-color-dark-100));
-   --color-dark-200: rgb(var(--tw-color-dark-200));
-   --color-dark-300: rgb(var(--tw-color-dark-300));
-   --color-dark-400: rgb(var(--tw-color-dark-400));
-   --color-dark-500: rgb(var(--tw-color-dark-500));
-   --color-dark-600: rgb(var(--tw-color-dark-600));
-   --color-dark-700: rgb(var(--tw-color-dark-700));
-   --color-dark-800: rgb(var(--tw-color-dark-800));
-   --color-dark-900: rgb(var(--tw-color-dark-900));
- /* #endregion  /**======== Dark Color =========== */
-
-    
+  /* #region  /**=========== Dark Color =========== */
+  --tw-color-dark-100: 37 38 39;
+  --tw-color-dark-200: 33 34 35;
+  --tw-color-dark-300: 29 30 30;
+  --tw-color-dark-400: 25 25 26;
+  --tw-color-dark-500: 21 21 22;
+  --tw-color-dark-600: 17 17 18;
+  --tw-color-dark-700: 13 13 13;
+  --tw-color-dark-800: 9 9 9;
+  --tw-color-dark-900: 4 5 5;
+  --color-dark-100: rgb(var(--tw-color-dark-100));
+  --color-dark-200: rgb(var(--tw-color-dark-200));
+  --color-dark-300: rgb(var(--tw-color-dark-300));
+  --color-dark-400: rgb(var(--tw-color-dark-400));
+  --color-dark-500: rgb(var(--tw-color-dark-500));
+  --color-dark-600: rgb(var(--tw-color-dark-600));
+  --color-dark-700: rgb(var(--tw-color-dark-700));
+  --color-dark-800: rgb(var(--tw-color-dark-800));
+  --color-dark-900: rgb(var(--tw-color-dark-900));
+  /* #endregion  /**======== Dark Color =========== */
 }
 
 body {
-    @apply bg-primary-600 dark:bg-dark-100  md:px-6 xl:px-0 max-w-[1280px] mx-auto;
+  @apply bg-primary-600 dark:bg-dark-100  md:px-6 xl:px-0 max-w-[1280px] mx-auto;
+}
+
+.slick-track {
+  @apply !mb-[320px] !mt-16;
 }

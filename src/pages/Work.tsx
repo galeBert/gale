@@ -2,8 +2,13 @@ import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+
+import Lottie from "lottie-react";
+import MessengerAnimation from "../assets/messenger-mockup.json";
+
 export default function Work() {
   const ref = useRef(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -35,9 +40,10 @@ export default function Work() {
       src: "https://firebasestorage.googleapis.com/v0/b/gale-web.appspot.com/o/airbnb-mock.mp4?alt=media&token=5edd73ec-0a2d-4158-95fb-d51c5d8414da&_gl=1*165eyjb*_ga*NDAxNDkxMDQuMTY3MjIwMDk1OA..*_ga_CW55HF8NVT*MTY4NjMwMzQ3MS4xMS4xLjE2ODYzMDQyMjcuMC4wLjA.",
     },
     {
-      name: "AIRBNB CLONE 1",
-      subtitle: "typescript, prisma, mongoDB",
-      src: "https://firebasestorage.googleapis.com/v0/b/gale-web.appspot.com/o/airbnb-mock.mp4?alt=media&token=5edd73ec-0a2d-4158-95fb-d51c5d8414da&_gl=1*165eyjb*_ga*NDAxNDkxMDQuMTY3MjIwMDk1OA..*_ga_CW55HF8NVT*MTY4NjMwMzQ3MS4xMS4xLjE2ODYzMDQyMjcuMC4wLjA.",
+      name: "MESSENGER CLONE",
+      subtitle: "typescript, NextJs,pusher, prisma, mongoDB",
+      src: MessengerAnimation,
+      type: "lottie",
     },
     {
       name: "airbnb project2",
@@ -71,7 +77,7 @@ export default function Work() {
       <div>
         <div className="absolute right-0 w-full md:w-[90%] p-4">
           <Slider
-            className="!overflow-visible group !relative"
+            className="!overflow-visible group !relative "
             {...settings}
             beforeChange={(_, next) => {
               if (next === workCarousel.length - 1) return setActive(0);
@@ -81,67 +87,114 @@ export default function Work() {
             {workCarousel.map((data, idx) => {
               return (
                 <div
+                  key={idx}
                   className="
               md:p-2
               md:h-[430px]
               lg:h-[500px]
               h-[300px]
+              !w-fit
               relative "
                 >
-                  <div className=" w-full h-full flex items-end">
-                    {active === idx ? (
-                      <div
-                        className="font-clash text-black group-hover:text-primary-600 
-                       text-xl absolute -right-[34%] z-20 top-6 text-right"
-                      >
-                        <motion.h2
-                          className="font-bold"
-                          initial={active === idx && { opacity: 0 }}
-                          animate={
-                            active === idx && {
-                              opacity: 1,
-                              transition: { duration: 0.3, delay: 0.5 },
-                            }
-                          }
-                        >
-                          {workCarousel[active].name}
-                        </motion.h2>
-                        <motion.span
-                          initial={active === idx && { opacity: 0 }}
-                          animate={
-                            active === idx && {
-                              opacity: 1,
-                              transition: { duration: 0.3, delay: 0.7 },
-                            }
-                          }
-                          className="font-clash font-light text-base"
-                        >
-                          {workCarousel[active].subtitle}
-                        </motion.span>
-                      </div>
-                    ) : null}
-
-                    <motion.video
+                  <div
+                    className={
+                      active === idx
+                        ? "!absolute !-top-36  h-full flex items-end"
+                        : "!absolute !-top-36 w-full max-w-[400px] h-full flex items-end"
+                    }
+                  >
+                    <motion.div
                       animate={{
-                        scale: active === idx ? 2.3 : 0.5,
-                        originY: 1,
+                        scale: active === idx ? 2.3 : 1,
+                        originY: 0.7,
+                        originX: 0.3,
                       }}
-                      initial={{ originY: 0.5 }}
+                      initial={{ originY: 0, originX: 0.3 }}
                       transition={{ duration: 0.3 }}
-                      ref={videoRef}
-                      onTouchStart={handlePlay}
-                      autoPlay
-                      muted={true}
-                      loop
-                      playsInline
-                      preload="none"
-                      className={`h-[210px] peer p-2 hover:backdrop-blur-sm hover:bg-black/30  pt-9 rounded-lg ${
+                      className={`  peer text-right p-2 backdrop-blur-sm bg-black/30 rounded-lg ${
                         active === idx
-                          ? "duration-500 z-10 !opacity-100 relative"
+                          ? "duration-500  z-10 !opacity-100 relative"
                           : "!opacity-30"
                       }   `}
-                      src={data.src}
-                    />
+                    >
+                      <div className="flex justify-end">
+                        <div
+                          className="font-clash text-right text-black group-hover:text-primary-600 
+                       text-xs"
+                        >
+                          {active === idx ? (
+                            <>
+                              <motion.h2
+                                className="font-bold"
+                                initial={
+                                  active === idx && {
+                                    scale: 0.7,
+                                    opacity: 0,
+                                    originX: 1,
+                                  }
+                                }
+                                animate={
+                                  active === idx && {
+                                    opacity: 1,
+                                    transition: {
+                                      duration: 0.3,
+                                      delay: 0.5,
+                                      scale: 0.7,
+                                      originX: 1,
+                                    },
+                                  }
+                                }
+                              >
+                                {workCarousel[active].name}
+                              </motion.h2>
+                              <motion.h2
+                                initial={
+                                  active === idx && {
+                                    opacity: 0,
+                                    scale: 0.7,
+                                    originX: 1,
+                                  }
+                                }
+                                animate={
+                                  active === idx && {
+                                    opacity: 1,
+                                    transition: {
+                                      duration: 0.3,
+                                      scale: 0.7,
+                                      delay: 0.7,
+                                      originX: 1,
+                                    },
+                                  }
+                                }
+                                className="font-clash font-light !text-xs"
+                              >
+                                {workCarousel[active].subtitle}
+                              </motion.h2>
+                            </>
+                          ) : null}
+                          <div className="w-full flex  justify-center">
+                            {data.type === "lottie" ? (
+                              <Lottie
+                                animationData={data.src}
+                                className="w-[200px]"
+                              />
+                            ) : (
+                              <motion.video
+                                ref={videoRef}
+                                onTouchStart={handlePlay}
+                                autoPlay
+                                muted={true}
+                                loop
+                                playsInline
+                                preload="none"
+                                src={data.src as string}
+                                className="w-[300px]"
+                              />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
                   </div>
                 </div>
               );
